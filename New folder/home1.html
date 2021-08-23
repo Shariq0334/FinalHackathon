@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="sty.css"> -->
+<link rel="stylesheet" href="dash.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-dark bg-dark " >
+      <li class="nav-item">
+        <a style="color: white; cursor: pointer;" class="nav-link"  id="logout">LOG OUT</a>
+      </li>
+      <span style="margin: 0 auto; color: white; font-weight: bolder; font-size:30px " class="navbar-text">
+        RESTAURANT DASHBOARD
+      </span>
+    </nav>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Add Dish</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Accepted</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#references" role="tab" data-toggle="tab">Delivered</a>
+      </li>
+    </ul>
+    
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="profile">
+        <div class="container">
+          <h1>ADD A DISH</h1>
+            <div class="form-group">
+              <label for="ItemName">Item Name</label>
+              <input type="text" class="form-control" id="item-name" aria-describedby="emailHelp" placeholder="Item Name">
+            </div>
+            <div class="form-group">
+              <label for="ItemName">Item Price</label>
+              <input type="text" class="form-control" id="item-price" aria-describedby="emailHelp" placeholder="Item Price">
+            </div>
+            <div class="form-group">
+              <label for="ItemName">Delivery Type</label>
+              <input type="text" class="form-control" id="delivery" aria-describedby="emailHelp" placeholder="Delivery Type">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Upload Item Picture</label>
+              <input type="file" class="form-control-file" id="image">
+            </div>
+           
+            <button onclick="addDish()" id="add" class="btn btn-primary">Submit</button>
+          
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="buzz">
+        <h1>NO ORDERS ACCEPTED YET</h1>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="references">
+        <h1>NO ORDERS DELIVERED YET</h1>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+
+    
+
+    <!-- <div id="main" class="card" style="width: 30rem; margin: 0 auto;">
+        <img height="300px" src="https://threewill.com/wp-content/uploads/austin-ryan-full-resolution-office-365.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h1 id="name"  class="card-title"></h1>
+          <h4 id="email" ></h4>
+          <h4 id="country" ></h4>
+          <h4 id="phone" ></h4>
+          <h1>Congratulations You're now our User</h1>
+          <button onclick="logOut()" class="btn btn-primary">Log Out</button>
+          <button onclick="deleteAccount()" class="btn btn-primary">Delete Account</button>
+        </div>
+      </div> -->
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAhRW-pCXu-VUhSaEj99Wzl3GR_LLIyVpQ",
+    authDomain: "my-app-82b0b.firebaseapp.com",
+    projectId: "my-app-82b0b",
+    storageBucket: "my-app-82b0b.appspot.com",
+    messagingSenderId: "1005070195075",
+    appId: "1:1005070195075:web:e96918be1cfb89d5dc7eb6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="home.js"></script>
+      <script src="restaurant.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
